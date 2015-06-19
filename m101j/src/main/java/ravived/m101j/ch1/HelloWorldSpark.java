@@ -13,5 +13,6 @@ public class HelloWorldSpark {
     public static void main(String[] args) {
 
         Spark.get("/hello", (req, res) -> "Hello World");
+
     }
 }
