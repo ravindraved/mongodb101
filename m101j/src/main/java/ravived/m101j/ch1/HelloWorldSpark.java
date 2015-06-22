@@ -11,6 +11,7 @@ import spark.Spark.*;
  */
 public class HelloWorldSpark {
     public static void main(String[] args) {
+        //configure routes
 
         Spark.get("/hello", (req, res) -> "Hello World");
 

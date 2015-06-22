@@ -18,9 +18,12 @@ public class HelloWorldSparkFreemarkerStyle {
 
     public static void main(String[] args) {
 
+        //configure Freemarker
+
         final Configuration configuration = new Configuration();
         configuration.setClassForTemplateLoading(HelloWorldSparkFreemarkerStyle.class, "/");
 
+        //configure routes
 
         Spark.get("/", (request, response) -> {
             StringWriter stringWriter = new StringWriter();
@@ -43,6 +46,11 @@ public class HelloWorldSparkFreemarkerStyle {
             }
             return stringWriter;
 
+        });
+
+
+        Spark.get("/echo/:thing", (request, response) -> {
+            return (request.params(":thing"));
         });
 
 

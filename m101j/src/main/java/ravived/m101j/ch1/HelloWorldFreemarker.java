@@ -16,6 +16,8 @@ public class HelloWorldFreemarker {
     public static void main(String[] args) {
         //in start of classpath of HelloWorldFreemarker is whre u find html
         //define template in resources directory-- maven and intellij know to include this in classpath
+        //configure Freemarker
+
         Configuration configuration = new Configuration();
         configuration.setClassForTemplateLoading(HelloWorldFreemarker.class, "/");
 
